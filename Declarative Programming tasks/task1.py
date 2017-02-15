@@ -31,15 +31,3 @@ def foo(data, rating_euro_bgn, rating_usd_bgn):
 
 if __name__ == "__main__":
     print(foo(test, 1.95, 1.82))
-
-date = r'\b(?:[12][0-9]|3[01]|0?[1-9])/(?:0[1-9]|[1-9]|1[012])/(?:[12][0-9]{3}|[1-9][0-9])\b'
-# sen = sentance
-sen = r'(?:\b[a-zA-Z]+\b\s*)'
-
-# st= something
-st = r'(?:' + date + r'|[,;: ])*'
-# et = everything
-et = r'[^.!?]'
-# bd = between dates
-bd = st + sen + r'+' + st
-reexp = r'([^.!?]*(?:' + date + bd + r'){3}' + date + r'[^.!?]*[.!?])'
